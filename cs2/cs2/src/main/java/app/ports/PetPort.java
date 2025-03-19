@@ -1,5 +1,8 @@
 package app.ports;
 
+import app.domain.models.Pet;
+
 public interface PetPort {
-	void findById(String petId);
+	public void savePet(Pet pet);
+	public Pet findById(long documentNumber);
 }

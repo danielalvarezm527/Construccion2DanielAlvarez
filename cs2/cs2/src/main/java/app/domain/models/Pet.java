@@ -8,25 +8,23 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Pet {
-	private String petId;
-	private String petName;
-	private PetOwner petOwner;
-	private int age;
-	private String species;
-	private String breed;
-    private String characteristics;
+	private long petId;
+    private String name;
+    private int age;
+    private String species;
+    private String breed; //Raza
     private float weight;
-    
-	public Pet(String petId, String petName, PetOwner petOwner, int age, String species, String breed,
-			String characteristics, float weight) {
-		this.petId = petId;
-		this.petName = petName;
-		this.petOwner = petOwner;
-		this.age = age;
-		this.species = species;
-		this.breed = breed;
-		this.characteristics = characteristics;
-		this.weight = weight;
-	}
-    
+    private Person owner;
+    private MedicalHistory medicalHistory;
+
+    public Pet(long petId, String name, int age, String species, String breed, float weight, Person owner, MedicalHistory medicalHistory) {
+        this.petId = petId;
+    	this.name = name;
+        this.age = age;
+        this.species = species;
+        this.breed = breed;
+        this.weight = weight;
+        this.owner = owner;
+        this.medicalHistory = medicalHistory;
+    }
 }

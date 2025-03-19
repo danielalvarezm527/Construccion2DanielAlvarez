@@ -8,16 +8,15 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Person {
-	private long personId;
-	private String personName;
-	private int personAge;
-	private String personRole;
-	
-	public Person(long personId, String personName, int personAge, String personRole) {
-		super();
-		this.personId = personId;
-		this.personName = personName;
-		this.personAge = personAge;
-		this.personRole = personRole;
-	}
+    private String personName;
+    private int personAge;
+    private long document;
+    private String role;
+
+    public Person(String personName, int personAge, long documentNumber, String role) {
+        this.personName = personName;
+        this.personAge = personAge;
+        this.document = documentNumber;
+        this.role = role;
+    }
 }
